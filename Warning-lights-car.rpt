@@ -1,6 +1,6 @@
 Report       : Warning-lights-car
 Date         : 07-31-2017
-Time         : 20:09:57
+Time         : 20:16:32
 
 Compiler     : BASCOM-AVR LIBRARY V 2.0.7.8
 Processor    : TINY2313
@@ -8,9 +8,9 @@ SRAM         : 80 hex
 EEPROM       : 80 hex
 ROMSIZE      : 800 hex
 
-ROMIMAGE     : 2A4 hex  -> Will fit into ROM
-ROMIMAGE     :  676 dec
-FLASH USED   :  33  %
+ROMIMAGE     : 752 hex  -> Will fit into ROM
+ROMIMAGE     :  1874 dec
+FLASH USED   :  91  %
 BAUD         : 9600 Baud
 XTAL         : 8000000 Hz
 BAUD error   : 0.16%
@@ -21,7 +21,7 @@ S-Stacksize  : 10 hex
 S-Stackstart : B8 hex
 Framesize    : 20 hex
 Framestart   : 88 hex
-Space left   :  37  dec
+Space left   :  36  dec
 
 LCD DB7      : PORTB.7
 LCD DB6      : PORTB.6
@@ -89,7 +89,8 @@ PWM0A                            Byte              0056          86
 PWM0B                            Byte              005C          92 
 ERR                              Bit [2]           0006          6 
 A                                Byte              0060          96 
-ON_TIMER                         Byte              0061          97 
+B                                Byte              0061          97 
+STROBE_WAS_ON                    Bit [7]           0062          98 
 
 --------------------------------------------------------------------------------
 Constant                         Value
@@ -535,6 +536,11 @@ _HWSTACK_LOW                     &H00B7
 _SWSTACK_LOW                     &H00A8
 _FRAME_HIGH                      &H00A9
 _XMEGA                           0
+PWM_OFF                          255
+PWM_LOW                          235
+PWM_HIGH                         0
+ON                               1
+OFF                              0
 CBITINFINITY                     0
 CMBITINFINITY                    1
 CBITZERO                         1
