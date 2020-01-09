@@ -1,5 +1,5 @@
 '--------------------------------------------------------------
-'                   Thomas Jensen | uCtrl.io
+'                   Thomas Jensen | stdout.no
 '--------------------------------------------------------------
 '  file: Strobe_light_controller_for_car_1.1
 '  date: 19/05/2009
